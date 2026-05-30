@@ -1,0 +1,1340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kibaba · Private Investor Briefing — Monday 1 June 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-bg"></div><div class="hero-overlay"></div><div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="ndovu-brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1.5" fill="white" opacity="0.9"/><rect x="11" y="2" width="7" height="7" rx="1.5" fill="white" opacity="0.6"/><rect x="2" y="11" width="7" height="7" rx="1.5" fill="white" opacity="0.6"/><rect x="11" y="11" width="7" height="7" rx="1.5" fill="white" opacity="0.9"/></svg>
+      </div>
+      <span class="brand-name">Ndovu<span class="brand-divider"> / </span></span>
+      <span class="brand-sub">Wealth Management</span>
+    </div>
+    <div class="event-badge"><div class="badge-pulse"></div><span class="badge-text">Private Briefing &nbsp;·&nbsp; Monday, 1 June 2026</span></div>
+    <div class="hero-kib">Kibaba</div>
+    <div class="hero-fund">Multi-Asset Special Fund</div>
+    <div class="orange-rule"></div>
+    <p class="hero-body">By invitation. A curated briefing designed exclusively for <strong>High Net Worth individuals</strong> who understand that capital, properly positioned, compounds without interruption.<br><br>Monday is reserved for those ready to know the precise difference — in real numbers — between where their wealth is, and where it could be.</p>
+    <div class="specs">
+      <div class="spec"><div class="spec-ico">📅</div>Monday, 1 June 2026</div>
+      <div class="spec"><div class="spec-ico">👤</div>Intimate &amp; Personalised</div>
+      <div class="spec"><div class="spec-ico">🏛️</div>CMA Regulated</div>
+      <div class="spec"><div class="spec-ico">💱</div>KES &amp; USD</div>
+    </div>
+    <div class="fund-pills">
+      <span class="fp">💰 Money Markets</span><span class="fp">📄 Fixed Income</span><span class="fp">🏛️ Bonds &amp; T-Bills</span><span class="fp">📈 Equities</span><span class="fp feat">⭐ Kibaba Special Fund</span>
+    </div>
+    <div class="hero-ctas">
+      <a href="https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3" target="_blank" class="cta-invest">Begin Investing Today <svg viewBox="0 0 16 16" fill="none" style="width:13px;height:13px"><path d="M3 8h10M8 3l5 5-5 5" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      <button class="cta-scroll" onclick="document.querySelector('.form-section').scrollIntoView({behavior:'smooth'})">Complete My Profile ↓</button>
+    </div>
+    <div class="invest-hint">To invest: <a href="https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3" target="_blank">portal.ndovu.co/auth/registration?code=6Q4ZC6A3</a></div>
+  </div>
+</div>
+
+<!-- ══ FORM ══ -->
+<div class="form-section"><div class="wrap">
+<div class="prog-wrap">
+  <div class="prog-top"><span class="prog-label" id="prog-label">Section 1 of 10</span><span class="prog-pct" id="prog-pct">10%</span></div>
+  <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:10%"></div></div>
+</div>
+<div class="dot-nav" id="dot-nav"></div>
+
+<!-- ══ STEP 1 — Contact ══ -->
+<div class="step active" id="step-1">
+  <div class="step-card">
+    <div class="step-num">01 — Your Introduction</div>
+    <div class="step-q">A pleasure. May we begin with your details?</div>
+    <div class="step-sub">All information is held in the strictest confidence. This briefing is by personal invitation — your profile ensures Monday's session is calibrated for you alone.</div>
+    <div class="inp-grp">
+      <div><label class="inp-lbl">Full Name *</label><input type="text" id="f-name" placeholder="e.g. Amara Osei-Mensah" oninput="checkStep1()"></div>
+      <div><label class="inp-lbl">WhatsApp / Mobile *</label><input type="tel" id="f-phone" placeholder="+254 7XX XXX XXX" oninput="checkStep1()"></div>
+      <div><label class="inp-lbl">Email Address *</label><input type="email" id="f-email" placeholder="your@email.com" oninput="checkStep1()"></div>
+      <div><label class="inp-lbl">City / Location</label><input type="text" id="f-loc" placeholder="e.g. Nairobi, Mombasa, Dubai…"></div>
+    </div>
+  </div>
+  <div class="nav"><button class="btn-next" id="next-1" onclick="goNext(1)" disabled>Continue →</button></div>
+</div>
+
+<!-- ══ STEP 2 — Investor Type ══ -->
+<div class="step" id="step-2">
+  <div class="step-card">
+    <div class="step-num">02 — Your Standing</div>
+    <div class="step-q">Which best describes your <em>current position?</em></div>
+    <div class="step-sub">Each investor arrives with a different story. Knowing yours ensures the briefing speaks directly to what matters most — without unnecessary detours.</div>
+    <div class="opts" id="q-type">
+      <button class="opt" onclick="pickSingle('q-type',this,'Senior Professional / C-Suite')"><span class="opt-dot">✓</span><div><div class="opt-t">Senior Professional / C-Suite</div><div class="opt-d">Executive income, building legacy wealth alongside a distinguished career</div></div></button>
+      <button class="opt" onclick="pickSingle('q-type',this,'Business Owner / Entrepreneur')"><span class="opt-dot">✓</span><div><div class="opt-t">Business Owner / Entrepreneur</div><div class="opt-d">Operating enterprises, seeking diversification beyond business assets</div></div></button>
+      <button class="opt" onclick="pickSingle('q-type',this,'Diaspora Investor')"><span class="opt-dot">✓</span><div><div class="opt-t">Diaspora Investor</div><div class="opt-d">International positioning — precision KES or USD-linked growth back home</div></div></button>
+      <button class="opt" onclick="pickSingle('q-type',this,'Family Office / SACCO / Institution')"><span class="opt-dot">✓</span><div><div class="opt-t">Family Office / SACCO / Institution</div><div class="opt-d">Managing collective, chama, or institutional capital with governance requirements</div></div></button>
+      <button class="opt" onclick="pickSingle('q-type',this,'High Net Worth Individual')"><span class="opt-dot">✓</span><div><div class="opt-t">High Net Worth Individual</div><div class="opt-d">Significant personal capital seeking sophisticated, expert stewardship</div></div></button>
+      <button class="opt" onclick="pickSingle('q-type',this,'Building My Foundation')"><span class="opt-dot">✓</span><div><div class="opt-t">Building My Foundation</div><div class="opt-d">Establishing a properly structured wealth architecture for the first time</div></div></button>
+      <button class="opt" onclick="pickOther('q-type',this)"><span class="opt-dot">✓</span><div><div class="opt-t">Other</div><div class="opt-d">Describe your own position — in your own words</div></div></button>
+    </div>
+    <div class="other-input-wrap" id="other-q-type">
+      <textarea class="other-textarea" id="other-q-type-input" placeholder="Describe yourself briefly — up to 15 words…" oninput="watchWords('q-type',this)"></textarea>
+      <div class="word-counter" id="other-q-type-count">0 / 15 words</div>
+    </div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(2)">← Back</button><button class="btn-next" id="next-2" onclick="goNext(2)" disabled>Continue →</button></div>
+</div>
+
+<!-- ══ STEP 3 — Current Holdings ══ -->
+<div class="step" id="step-3">
+  <div class="step-card">
+    <div class="step-num">03 — Where Your Capital Resides</div>
+    <div class="step-q">Your portfolio today — where is your wealth <em>working?</em></div>
+    <div class="step-sub">Knowing your current allocation allows us to demonstrate — precisely, in your own numbers — where each Kibaba strategy creates a meaningful upgrade.</div>
+    <p class="multi-hint">Select all that apply</p>
+    <div class="opts" id="q-curr">
+      <button class="opt" onclick="pickMulti('q-curr',this,'Bank savings / fixed deposit')"><span class="opt-dot">✓</span><div><div class="opt-t">Bank savings / fixed deposit</div><div class="opt-d">Typically 3–7% p.a. — serious room to upgrade</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'Money market fund (MMF)')"><span class="opt-dot">✓</span><div><div class="opt-t">Money market fund (MMF)</div><div class="opt-d">10–13% p.a. — a sound foundation, not yet fully diversified</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'T-bills / government bonds')"><span class="opt-dot">✓</span><div><div class="opt-t">Treasury bills / government bonds</div><div class="opt-d">CBK-issued, 12–16% range — solid fixed income base</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'NSE equities / unit trusts')"><span class="opt-dot">✓</span><div><div class="opt-t">NSE equities / unit trusts</div><div class="opt-d">Kenyan listed equities or collective investment schemes</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'Property / real estate')"><span class="opt-dot">✓</span><div><div class="opt-t">Property / real estate</div><div class="opt-d">Land, rental units, or development-stage property</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'SACCO shares / chama deposits')"><span class="opt-dot">✓</span><div><div class="opt-t">SACCO shares / chama deposits</div><div class="opt-d">Savings and credit cooperative or group savings allocation</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'Global / USD investments')"><span class="opt-dot">✓</span><div><div class="opt-t">Global / USD investments</div><div class="opt-d">Foreign ETFs, US equities, or USD-denominated instruments</div></div></button>
+      <button class="opt" onclick="pickMulti('q-curr',this,'Nothing formally structured yet')"><span class="opt-dot">✓</span><div><div class="opt-t">Nothing formally structured yet</div><div class="opt-d">This session marks the beginning of a considered approach</div></div></button>
+      <button class="opt" onclick="pickOtherMulti('q-curr',this)"><span class="opt-dot">✓</span><div><div class="opt-t">Other</div><div class="opt-d">Something else — describe it in your own words</div></div></button>
+    </div>
+    <div class="other-input-wrap" id="other-q-curr">
+      <textarea class="other-textarea" id="other-q-curr-input" placeholder="Briefly describe your holding — up to 15 words…" oninput="watchWordsMulti('q-curr',this)"></textarea>
+      <div class="word-counter" id="other-q-curr-count">0 / 15 words</div>
+    </div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(3)">← Back</button><button class="btn-next" id="next-3" onclick="goNext(3)" disabled>Continue →</button></div>
+</div>
+
+<!-- ══ STEP 4 — Calculator ══ -->
+<div class="step" id="step-4">
+  <div class="step-card">
+    <div class="step-num">04 — The Arithmetic of Ambition</div>
+    <div class="step-q">Model what your capital could <em>truly become.</em></div>
+    <div class="step-sub">Enter your figures. Set your top-up cadence. Watch in real time as each strategy compounds toward your target — walk into Monday already knowing exactly what your numbers look like.</div>
+
+    <div class="currency-toggle">
+      <button class="cur-btn active" id="cur-kes" onclick="setCur('KES')">🇰🇪 KES</button>
+      <button class="cur-btn" id="cur-usd" onclick="setCur('USD')">🇺🇸 USD</button>
+    </div>
+
+    <div style="margin-bottom:16px;">
+      <label class="inp-lbl">Initial Capital</label>
+      <div class="amount-input-wrap">
+        <span class="amount-prefix" id="calc-prefix">KES</span>
+        <input type="number" class="amount-field" id="amt-input" placeholder="500,000" min="0" oninput="onAmtInput()">
+      </div>
+      <div style="margin-top:8px;">
+        <input type="range" id="amt-slider" min="0" max="10" value="2" oninput="onSliderInput()">
+        <div class="range-labels"><span id="range-min">KES 250K</span><span id="range-max">KES 10M+</span></div>
+      </div>
+    </div>
+
+    <!-- Top-up: open range, any frequency -->
+    <div style="margin-bottom:4px;">
+      <label class="inp-lbl">Regular Top-Up</label>
+      <div class="topup-row">
+        <button class="topup-mode-btn active" id="tu-none" onclick="setTopup('none')">None</button>
+        <button class="topup-mode-btn" id="tu-monthly" onclick="setTopup('monthly')">Monthly</button>
+        <button class="topup-mode-btn" id="tu-quarterly" onclick="setTopup('quarterly')">Quarterly</button>
+        <button class="topup-mode-btn" id="tu-annual" onclick="setTopup('annual')">Annual</button>
+      </div>
+      <div id="topup-input-wrap" style="display:none;">
+        <div class="amount-input-wrap" style="margin-top:6px;">
+          <span class="amount-prefix" id="topup-prefix">KES</span>
+          <input type="number" id="topup-amount" placeholder="Enter any amount…" min="0" style="padding-left:55px;font-size:15px;" oninput="updateCalc()">
+        </div>
+        <div style="font-size:11px;color:var(--muted);margin-top:5px;" id="topup-note">Each addition compounds from the moment it enters the fund.</div>
+      </div>
+    </div>
+
+
+
+    <!-- Horizon -->
+    <div style="margin:16px 0;">
+      <label class="inp-lbl">Investment Horizon</label>
+      <div class="yr-btns">
+        <button class="yr-btn active" id="yr-1" onclick="setYr(1)">1 yr</button>
+        <button class="yr-btn" id="yr-3" onclick="setYr(3)">3 yrs</button>
+        <button class="yr-btn" id="yr-5" onclick="setYr(5)">5 yrs</button>
+        <button class="yr-btn" id="yr-10" onclick="setYr(10)">10 yrs</button>
+      </div>
+    </div>
+
+    <div class="chart-area">
+      <div class="chart-title" id="chart-title">Projected value after 1 year</div>
+      <div class="bars-grid" id="bars-grid"></div>
+    </div>
+
+    <div class="summary-strip">
+      <div class="strip-card"><div class="strip-l">Capital deployed</div><div class="strip-v" id="s-invested">—</div><div class="strip-sub">initial + top-ups</div></div>
+      <div class="strip-card"><div class="strip-l">Kibaba projected</div><div class="strip-v" id="s-kibaba">—</div><div class="strip-sub" id="s-kibaba-sub">at 20% p.a.</div></div>
+      <div class="strip-card"><div class="strip-l">Advantage vs bank</div><div class="strip-v" id="s-extra">—</div><div class="strip-sub">above fixed deposit</div></div>
+      <div class="strip-card" style="border-color:var(--orangeb);"><div class="strip-l">Net gain</div><div class="strip-v" id="s-gain" style="color:var(--orangel);">—</div><div class="strip-sub">return on capital</div></div>
+    </div>
+
+    <div class="kibaba-hl" style="margin-top:14px;">
+      <div style="font-size:22px;flex-shrink:0;">⭐</div>
+      <div><div class="kh-title">Kibaba Multi-Asset Special Fund</div><div class="kh-body">CMA-regulated · Target 20% p.a. net (KES) or 18% p.a. (USD) · Daily accrual, compounded quarterly · Global ETFs + NSE equities + fixed income + alternatives.</div></div>
+    </div>
+    <div class="invest-strip">
+      <div class="is-text"><div class="is-label">Ready to begin now?</div><div class="is-title">Open Your Ndovu Account</div><div class="is-sub">Your account opens in minutes.</div></div>
+      <a class="is-btn" href="https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3" target="_blank">Invest Now →</a>
+    </div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(4)">← Back</button><button class="btn-next btn-blue" onclick="goNext(4)">These numbers speak clearly →</button></div>
+</div>
+
+<!-- ══ STEP 5 — Wealth Horizon Visualiser ══ -->
+<div class="step" id="step-5">
+  <div class="step-num" style="padding-top:0;margin-bottom:10px;">05 — Your Wealth Horizon</div>
+  <div class="step-q" style="font-family:var(--serif);font-size:clamp(21px,5vw,29px);font-weight:600;line-height:1.2;color:var(--white);margin-bottom:6px;">See your targets. See the <em>path.</em></div>
+  <div class="step-sub">Set your wealth goal and deadline. The chart and tables calculate exactly how long each strategy takes, what top-up is needed, and whether your current plan gets you there — no assumptions, only your numbers.</div>
+
+  <div class="horizon-section">
+    <div class="horizon-inputs">
+      <div>
+        <label class="inp-lbl">My Target Wealth</label>
+        <div class="amount-input-wrap">
+          <span class="amount-prefix" id="target-prefix">KES</span>
+          <input type="number" id="target-wealth" placeholder="e.g. 5,000,000" min="0" style="padding-left:55px;font-size:16px;font-weight:600;font-family:var(--serif);" oninput="updateHorizon()">
+        </div>
+      </div>
+      <div>
+        <label class="inp-lbl">By the Year</label>
+        <select id="target-year" onchange="updateHorizon()">
+          <option value="3">2029 (3 years)</option>
+          <option value="5" selected>2031 (5 years)</option>
+          <option value="7">2033 (7 years)</option>
+          <option value="10">2036 (10 years)</option>
+          <option value="15">2041 (15 years)</option>
+          <option value="20">2046 (20 years)</option>
+          <option value="25">2051 (25 years)</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="horizon-canvas-wrap">
+      <canvas id="horizon-canvas" height="260"></canvas>
+    </div>
+
+    <!-- 3 insight cards -->
+    <div class="horizon-insight">
+      <div class="hi-card"><div class="hi-label">Capital Today</div><div class="hi-val" id="hi-now">—</div><div class="hi-note">your starting point</div></div>
+      <div class="hi-card orange"><div class="hi-label">Kibaba reaches goal</div><div class="hi-val orange" id="hi-kibaba-yr">—</div><div class="hi-note">years · no top-up</div></div>
+      <div class="hi-card"><div class="hi-label">Kibaba advantage</div><div class="hi-val" id="hi-diff">—</div><div class="hi-note">years faster than next</div></div>
+    </div>
+
+    <!-- Narrative -->
+    <div class="horizon-msg" id="horizon-msg">
+      Enter your target above to see your personalised wealth trajectory across all five strategies.
+    </div>
+
+    <!-- ══ SCENARIO TABULATION ══ -->
+    <div class="scenario-wrap" id="scenario-wrap" style="display:none;">
+      <div class="scenario-title">Scenario Analysis</div>
+
+      <div class="scenario-tabs">
+        <button class="sc-tab active" id="sctab-time" onclick="switchScTab('time')">⏱ Time to Goal</button>
+        <button class="sc-tab" id="sctab-topup" onclick="switchScTab('topup')">📈 Top-Up Needed</button>
+        <button class="sc-tab" id="sctab-noadditions" onclick="switchScTab('noadditions')">🔒 Capital Only</button>
+      </div>
+
+      <!-- Panel A: How long each strategy takes with current top-up -->
+      <div class="scenario-panel active" id="scpanel-time">
+        <table class="time-table" id="time-table-body">
+          <thead>
+            <tr>
+              <th>Strategy</th>
+              <th>Rate p.a.</th>
+              <th>Years to Goal</th>
+              <th>Target Year</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="time-table-rows"></tbody>
+        </table>
+        <div class="sc-callout" id="sc-callout-time">—</div>
+      </div>
+
+      <!-- Panel B: Monthly top-up each strategy needs to hit goal in time -->
+      <div class="scenario-panel" id="scpanel-topup">
+        <div style="font-size:11.5px;color:var(--muted);margin-bottom:12px;line-height:1.6;" id="topup-panel-sub">
+          Monthly top-up required for each strategy to reach your target within your chosen timeline.
+        </div>
+        <div class="topup-need-grid" id="topup-need-grid"></div>
+        <div class="sc-callout" id="sc-callout-topup">—</div>
+      </div>
+
+      <!-- Panel C: No additions — pure compounding only -->
+      <div class="scenario-panel" id="scpanel-noadditions">
+        <div style="font-size:11.5px;color:var(--muted);margin-bottom:12px;line-height:1.6;">
+          If no further capital is added after today — compounding alone, across each strategy.
+        </div>
+        <table class="time-table">
+          <thead>
+            <tr>
+              <th>Strategy</th>
+              <th>Rate p.a.</th>
+              <th>Value at Target Year</th>
+              <th>Years to Goal</th>
+              <th>Gap / Surplus</th>
+            </tr>
+          </thead>
+          <tbody id="noadd-table-rows"></tbody>
+        </table>
+        <div class="sc-callout" id="sc-callout-noadd">—</div>
+      </div>
+    </div><!-- /scenario-wrap -->
+
+  </div><!-- /horizon-section -->
+
+  <div class="nav"><button class="btn-back" onclick="goBack(5)">← Back</button><button class="btn-next btn-blue" onclick="goNext(5)">Continue →</button></div>
+</div>
+
+<!-- ══ STEP 6 — Fund Topics ══ -->
+<div class="step" id="step-6">
+  <div class="step-card">
+    <div class="step-num">06 — Topics of Depth</div>
+    <div class="step-q">Which strategies merit the closest <em>examination?</em></div>
+    <div class="step-sub">Monday's briefing covers all five. Tell us where to linger — and we will ensure the session honours your time and prioritises what matters most.</div>
+    <p class="multi-hint">Select all that warrant deeper discussion</p>
+    <div class="fund-chips" id="q-funds">
+      <div class="fund-chip" onclick="pickFund(this,'Money Markets')"><div class="fund-chip-check">✓</div><div class="fund-chip-icon">💰</div><div class="fund-chip-info"><div class="fund-chip-name">1. Money Markets</div><div class="fund-chip-rate">~10–13% p.a. · High liquidity</div><div class="fund-chip-desc">T-bills, commercial paper, call deposits — low risk, immediate access.</div></div></div>
+      <div class="fund-chip" onclick="pickFund(this,'Fixed Income')"><div class="fund-chip-check">✓</div><div class="fund-chip-icon">📄</div><div class="fund-chip-info"><div class="fund-chip-name">2. Fixed Income</div><div class="fund-chip-rate">~12–15% p.a. · Predictable returns</div><div class="fund-chip-desc">Corporate bonds, preference shares, medium-term notes. Regular income.</div></div></div>
+      <div class="fund-chip" onclick="pickFund(this,'Bonds and T-Bills')"><div class="fund-chip-check">✓</div><div class="fund-chip-icon">🏛️</div><div class="fund-chip-info"><div class="fund-chip-name">3. Bonds &amp; Treasury Bills</div><div class="fund-chip-rate">~13–16% p.a. · Government-backed</div><div class="fund-chip-desc">GoK infrastructure bonds, 91/182/364-day T-bills. The safest fixed return.</div></div></div>
+      <div class="fund-chip" onclick="pickFund(this,'Shares and Equities')"><div class="fund-chip-check">✓</div><div class="fund-chip-icon">📈</div><div class="fund-chip-info"><div class="fund-chip-name">4. Shares / Equities</div><div class="fund-chip-rate">~14–20% p.a. · Maximum long-term upside</div><div class="fund-chip-desc">NSE blue chips, global ETFs. The finest long-term wealth engine.</div></div></div>
+      <div class="fund-chip kibaba-chip" onclick="pickFund(this,'Kibaba Special Fund')"><div class="fund-chip-check">✓</div><div class="fund-chip-icon">⭐</div><div class="fund-chip-info"><div class="fund-chip-name">5. Kibaba Multi-Asset Special Fund</div><div class="fund-chip-rate">20% p.a. net (KES) · 18% p.a. net (USD) · Min KES 250K</div><div class="fund-chip-desc">All four strategies in one CMA-regulated fund. This is the conversation we came to have.</div></div></div>
+      <div class="fund-chip" onclick="pickFundOther(this)"><div class="fund-chip-check">✓</div><div class="fund-chip-icon">✏️</div><div class="fund-chip-info"><div class="fund-chip-name">Other area of interest</div><div class="fund-chip-rate">Your own focus</div><div class="fund-chip-desc">Describe a topic you'd like covered — in your own words</div></div></div>
+    </div>
+    <div class="other-input-wrap" id="other-q-funds">
+      <textarea class="other-textarea" id="other-q-funds-input" placeholder="What would you like covered? Up to 15 words…" oninput="watchWordsFunds(this)"></textarea>
+      <div class="word-counter" id="other-q-funds-count">0 / 15 words</div>
+    </div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(6)">← Back</button><button class="btn-next" id="next-6" onclick="goNext(6)" disabled>Continue →</button></div>
+</div>
+
+<!-- ══ STEP 7 — Readiness ══ -->
+<div class="step" id="step-7">
+  <div class="step-card">
+    <div class="step-num">07 — Your Timeline</div>
+    <div class="step-q">Where are you in your <em>investment journey?</em></div>
+    <div class="step-sub">Frankness is appreciated here. Your answer shapes how we enter the conversation on Monday — not whether you are welcome.</div>
+    <div class="readiness-cards" id="q-ready">
+      <div class="r-card" onclick="pickReady(this,'Ready to invest — show me the documents')"><div class="r-emoji">🚀</div><div><div class="r-t">I am ready — show me the documents</div><div class="r-d">Present the minimums, the process, and let us proceed. I am in.</div><div><span class="r-badge green">Ready to deploy</span></div></div></div>
+      <div class="r-card" onclick="pickReady(this,'Very interested — the session will confirm my decision')"><div class="r-emoji">🔍</div><div><div class="r-t">The session will confirm my decision</div><div class="r-d">Strong interest. I want my specific questions addressed before committing capital.</div><div><span class="r-badge amber">Session will decide</span></div></div></div>
+      <div class="r-card" onclick="pickReady(this,'Interested — still building conviction')"><div class="r-emoji">📚</div><div><div class="r-t">Still building conviction</div><div class="r-d">Genuine curiosity. I want the full picture before any commitment is made.</div><div><span class="r-badge muted">Information gathering</span></div></div></div>
+      <div class="r-card" onclick="pickReady(this,'Exploring — no commitment yet')"><div class="r-emoji">🌱</div><div><div class="r-t">Positioning myself — no pressure</div><div class="r-d">Keeping options open. Monday is a fact-finding exercise.</div><div><span class="r-badge muted">Exploring</span></div></div></div>
+      <div class="r-card" onclick="pickReadyOther(this)"><div class="r-emoji">✏️</div><div><div class="r-t">Other</div><div class="r-d">Describe where you are in your own words</div><div><span class="r-badge muted">Custom</span></div></div></div>
+    </div>
+    <div class="other-input-wrap" id="other-q-ready">
+      <textarea class="other-textarea" id="other-q-ready-input" placeholder="Where are you on your investment journey? Up to 15 words…" oninput="watchWordsReady(this)"></textarea>
+      <div class="word-counter" id="other-q-ready-count">0 / 15 words</div>
+    </div>
+    <div style="margin-top:18px;">
+      <label class="inp-lbl">Capital range for initial deployment</label>
+      <select id="f-avg-inv">
+        <option value="">Select a range…</option>
+        <option>KES 250,000 – 500,000</option><option>KES 500,000 – 1,000,000</option><option>KES 1,000,000 – 3,000,000</option><option>KES 3,000,000 – 5,000,000</option><option>KES 5,000,000 – 10,000,000</option><option>Over KES 10,000,000</option><option>USD 2,500 – 10,000</option><option>USD 10,000 – 50,000</option><option>USD 50,000+</option><option>The session will help me determine this</option>
+      </select>
+    </div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(7)">← Back</button><button class="btn-next" id="next-7" onclick="goNext(7)" disabled>Continue →</button></div>
+</div>
+
+<!-- ══ STEP 8 — Goals & Risk ══ -->
+<div class="step" id="step-8">
+  <div class="step-card">
+    <div class="step-num">08 — Your Objectives</div>
+    <div class="step-q">What are you ultimately <em>building toward?</em></div>
+    <div class="step-sub">Precision requires direction. The clarity you provide here is returned — with compounding interest — in the quality of your session and the precision of our recommendations.</div>
+    <div class="opts" id="q-goal" style="margin-bottom:16px;">
+      <button class="opt" onclick="pickSingle('q-goal',this,'Long-term wealth accumulation')"><span class="opt-dot">✓</span><div><div class="opt-t">Long-term wealth accumulation</div><div class="opt-d">Growing net worth significantly over a 5–10+ year horizon</div></div></button>
+      <button class="opt" onclick="pickSingle('q-goal',this,'Regular income / passive cash flow')"><span class="opt-dot">✓</span><div><div class="opt-t">Regular income / passive cash flow</div><div class="opt-d">Quarterly or semi-annual distributions alongside my lifestyle</div></div></button>
+      <button class="opt" onclick="pickSingle('q-goal',this,'Capital preservation with meaningful growth')"><span class="opt-dot">✓</span><div><div class="opt-t">Capital preservation with meaningful growth</div><div class="opt-d">Protecting what I have built while decisively beating inflation</div></div></button>
+      <button class="opt" onclick="pickSingle('q-goal',this,'Dollar-linked / currency protection')"><span class="opt-dot">✓</span><div><div class="opt-t">Dollar-linked / currency protection</div><div class="opt-d">Protecting against KES depreciation through USD-denominated returns</div></div></button>
+      <button class="opt" onclick="pickSingle('q-goal',this,'Financial independence / legacy wealth')"><span class="opt-dot">✓</span><div><div class="opt-t">Financial independence / legacy wealth</div><div class="opt-d">A fully funded future — for me, and for those who follow</div></div></button>
+      <button class="opt" onclick="pickOther('q-goal',this)"><span class="opt-dot">✓</span><div><div class="opt-t">Other</div><div class="opt-d">Describe your own financial objective</div></div></button>
+    </div>
+    <div class="other-input-wrap" id="other-q-goal"><textarea class="other-textarea" id="other-q-goal-input" placeholder="Your financial goal — up to 15 words…" oninput="watchWords('q-goal',this)"></textarea><div class="word-counter" id="other-q-goal-count">0 / 15 words</div></div>
+    <div class="sec-label">Risk disposition</div>
+    <div class="opts" id="q-risk">
+      <button class="opt" onclick="pickSingle('q-risk',this,'Conservative — capital security first')"><span class="opt-dot">✓</span><div><div class="opt-t">Conservative — capital security first</div><div class="opt-d">I prefer certainty. Modest, consistent returns over short-term volatility</div></div></button>
+      <button class="opt" onclick="pickSingle('q-risk',this,'Moderate — calibrated growth')"><span class="opt-dot">✓</span><div><div class="opt-t">Moderate — calibrated growth</div><div class="opt-d">Comfortable with managed fluctuation when the long-term trajectory is sound</div></div></button>
+      <button class="opt" onclick="pickSingle('q-risk',this,'Aggressive — maximum returns')"><span class="opt-dot">✓</span><div><div class="opt-t">Aggressive — maximum returns</div><div class="opt-d">I understand volatility. Corrections are opportunities. I am here for the long game.</div></div></button>
+      <button class="opt" onclick="pickOther('q-risk',this)"><span class="opt-dot">✓</span><div><div class="opt-t">Other</div><div class="opt-d">Describe your own approach to risk</div></div></button>
+    </div>
+    <div class="other-input-wrap" id="other-q-risk"><textarea class="other-textarea" id="other-q-risk-input" placeholder="Your risk approach — up to 15 words…" oninput="watchWords('q-risk',this)"></textarea><div class="word-counter" id="other-q-risk-count">0 / 15 words</div></div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(8)">← Back</button><button class="btn-next" id="next-8" onclick="goNext(8)" disabled>One final step →</button></div>
+</div>
+
+<!-- ══ STEP 9 — Booking ══ -->
+<div class="step" id="step-9">
+  <div class="step-card">
+    <div class="step-num">09 — Secure Your Place</div>
+    <div class="step-q">Reserve your private <em>consultation.</em></div>
+    <div class="step-sub">Your place on Monday, 1 June is ready to confirm. Select a format and time — your calendar invitation will follow within hours.</div>
+    <div class="session-confirmed">
+      <div style="font-size:30px;flex-shrink:0;">📅</div>
+      <div><div class="sc-label">Session Confirmed</div><div class="sc-title">Monday, 1 June 2026</div><div class="sc-sub">Kibaba Private Investor Briefing · Select your preferred time below</div></div>
+    </div>
+    <div class="meet-cards">
+      <div class="meet-card" id="meet-virtual" onclick="pickMeet('virtual')"><div class="meet-icon">💻</div><div class="meet-t">Virtual</div><div class="meet-d">Zoom or Google Meet — your office, your time</div></div>
+      <div class="meet-card" id="meet-physical" onclick="pickMeet('physical')"><div class="meet-icon">🏢</div><div class="meet-t">In-Person</div><div class="meet-d">Our Nairobi office — face to face</div></div>
+    </div>
+    <div class="cal-wrap">
+      <div class="cal-header"><div class="cal-month" id="cal-month-label">June 2026</div><div style="display:flex;gap:7px;"><button class="cal-nav-btn" onclick="calPrev()">‹</button><button class="cal-nav-btn" onclick="calNext()">›</button></div></div>
+      <div class="cal-grid" id="cal-grid"></div>
+      <div style="display:flex;gap:14px;margin-top:9px;flex-wrap:wrap;">
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);"><div style="width:12px;height:12px;background:var(--orangep);border:1px solid var(--orangeb);border-radius:3px;"></div>Monday</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:var(--muted);"><div style="width:12px;height:12px;background:var(--orange);border-radius:3px;"></div>Selected</div>
+        <div style="display:flex;align-items:center;gap:6px;font-size:11px;color:rgba(255,255,255,0.2);"><div style="width:12px;height:12px;background:rgba(255,255,255,0.07);border-radius:3px;"></div>Unavailable</div>
+      </div>
+    </div>
+    <div style="margin-top:16px;">
+      <div class="inp-lbl" style="margin-bottom:9px;">Time (8:00 AM – 6:00 PM)</div>
+      <div class="time-slots" id="time-slots-grid"></div>
+      <div class="selected-slot-display" id="selected-slot-display"></div>
+    </div>
+    <div style="margin-top:16px;"><label class="inp-lbl">Anything specific you would like addressed? (optional)</label><textarea id="f-notes" placeholder="e.g. Comparing Kibaba vs my current fixed deposit, fund liquidity, group or family office allocation…"></textarea></div>
+  </div>
+  <div class="nav"><button class="btn-back" onclick="goBack(9)">← Back</button><button class="btn-next" id="next-9" onclick="goNext(9)" disabled>Review My Profile →</button></div>
+</div>
+
+<!-- ══ STEP 10 — Summary ══ -->
+<div class="step" id="step-10">
+  <div style="text-align:center;margin-bottom:22px;">
+    <div class="hdr-tag"><div class="hdr-tag-dot"></div>&nbsp;Profile Complete</div>
+    <h2 style="font-family:var(--serif);font-size:clamp(24px,6vw,36px);font-weight:600;margin-top:10px;">Prepared with precision.</h2>
+    <p style="font-size:13px;color:var(--muted);margin-top:5px;font-weight:300;">Review and send to your advisor via WhatsApp.</p>
+  </div>
+  <div class="sum-card">
+    <div class="prof-badge" id="s-prof-badge">HNW Investor</div>
+    <div class="sum-title">Contact Details</div>
+    <div class="s-row"><div class="s-k">Name</div><div class="s-v hi" id="s-name">—</div></div>
+    <div class="s-row"><div class="s-k">Mobile</div><div class="s-v" id="s-phone">—</div></div>
+    <div class="s-row"><div class="s-k">Email</div><div class="s-v" id="s-email">—</div></div>
+    <div class="s-row"><div class="s-k">Location</div><div class="s-v" id="s-loc">—</div></div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-title">Investment Profile</div>
+    <div class="s-row"><div class="s-k">Standing</div><div class="s-v hi" id="s-type">—</div></div>
+    <div class="s-row"><div class="s-k">Current assets</div><div class="s-v" id="s-curr">—</div></div>
+    <div class="s-row"><div class="s-k">Primary objective</div><div class="s-v" id="s-goal">—</div></div>
+    <div class="s-row"><div class="s-k">Risk disposition</div><div class="s-v" id="s-risk">—</div></div>
+    <div class="s-row"><div class="s-k">Capital range</div><div class="s-v hi" id="s-inv">—</div></div>
+    <div class="s-row"><div class="s-k">Readiness</div><div class="s-v hi" id="s-ready">—</div></div>
+    <div class="s-row"><div class="s-k">Wealth target</div><div class="s-v" id="s-target">—</div></div>
+  </div>
+  <div class="sum-card">
+    <div class="sum-title">Session Details</div>
+    <div class="s-row"><div class="s-k">Topics requested</div><div class="s-v" id="s-funds">—</div></div>
+    <div class="s-row"><div class="s-k">Format</div><div class="s-v hi" id="s-meet">—</div></div>
+    <div class="s-row"><div class="s-k">Date &amp; time</div><div class="s-v hi" id="s-datetime">—</div></div>
+    <div class="s-row"><div class="s-k">Notes</div><div class="s-v" id="s-notes">—</div></div>
+  </div>
+  <div class="invest-strip" style="margin-bottom:18px;">
+    <div class="is-text"><div class="is-label">Skip the queue — invest now</div><div class="is-title">Open your Ndovu account directly</div><div class="is-sub">portal.ndovu.co/auth/registration?code=6Q4ZC6A3</div></div>
+    <a class="is-btn" href="https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3" target="_blank">Begin Investing →</a>
+  </div>
+  <!-- Submit section -->
+  <div id="submit-section">
+    <div class="form-error" id="form-error"></div>
+    <button class="submit-btn" id="submit-btn" onclick="submitForm()">
+      Submit My Registration
+    </button>
+    <button class="copy-btn" onclick="copyProfile()" style="margin-bottom:12px;">📋 Copy profile to clipboard</button>
+    <p id="copy-ok" style="display:none;color:#5B8FF0;font-size:13px;margin-top:4px;margin-bottom:10px;text-align:center;">✓ Copied</p>
+    <div class="disclaimer"><strong>Important Notice:</strong> All projected returns are target rates and are not guaranteed. Investment capital is at risk. Past performance does not indicate future results. The Kibaba Multi-Asset Special Fund is regulated by the Capital Markets Authority of Kenya (CMA). This form is for qualification and booking purposes only and does not constitute financial advice. Please read the fund prospectus before investing.<br><br>Ndovu Wealth Limited · CMA Regulated · nwafubwa@ndovu.co · +254 707 462 764</div>
+  </div>
+
+  <!-- ══ SUCCESS SCREEN ══ -->
+  <div class="success-screen" id="success-screen">
+    <div class="success-hero">
+      <div class="success-tick">✓</div>
+      <div class="success-title">You are confirmed.</div>
+      <p class="success-sub">Your registration has been received. A personal confirmation has been sent to your email — check your inbox (and spam, just in case).</p>
+    </div>
+
+    <div class="invite-card">
+      <div class="invite-badge">Your Invitation</div>
+      <div class="invite-event">Kibaba Private Investor Briefing</div>
+      <div class="invite-detail">
+        📅 &nbsp;Monday, 1 June 2026<br>
+        🕗 &nbsp;<span id="success-time">—</span><br>
+        📍 &nbsp;<span id="success-format">—</span><br>
+        👤 &nbsp;<span id="success-name">—</span>
+      </div>
+      <div class="invite-actions">
+        <a class="cal-btn google" id="gcal-link" href="#" target="_blank">
+          <svg viewBox="0 0 18 18" width="16" height="16"><path fill="#4285F4" d="M16.5 9.2c0-.6-.1-1.2-.2-1.7H9v3.2h4.2c-.2 1-.8 1.8-1.6 2.4v2h2.6c1.5-1.4 2.3-3.5 2.3-5.9z"/><path fill="#34A853" d="M9 17c2.2 0 4-.7 5.3-2l-2.6-2c-.7.5-1.6.8-2.7.8-2.1 0-3.8-1.4-4.5-3.3H1.9v2c1.3 2.6 4 4.5 7.1 4.5z"/><path fill="#FBBC05" d="M4.5 10.5c-.2-.5-.3-1-.3-1.5s.1-1 .3-1.5v-2H1.9C1.3 6.7 1 7.8 1 9s.3 2.3.9 3.3l2.6-1.8z"/><path fill="#EA4335" d="M9 4.5c1.2 0 2.2.4 3 1.2l2.2-2.2C12.9 2.2 11.1 1.5 9 1.5 5.9 1.5 3.3 3.4 1.9 6l2.6 2c.7-2 2.4-3.5 4.5-3.5z"/></svg>
+          Add to Google Calendar
+        </a>
+        <button class="cal-btn ical" onclick="downloadICS()">
+          📅 Download .ics / Apple
+        </button>
+      </div>
+    </div>
+
+    <div class="next-steps">
+      <div class="ns-title">What happens next</div>
+      <div class="ns-grid">
+        <div class="ns-card">
+          <div class="ns-icon">📧</div>
+          <div class="ns-t">Confirmation email</div>
+          <div class="ns-d">Check your inbox now — a personal confirmation with session details has been sent to you.</div>
+        </div>
+        <div class="ns-card">
+          <div class="ns-icon">📞</div>
+          <div class="ns-t">Advisor contact</div>
+          <div class="ns-d">An Ndovu advisor will reach out before Monday to answer any questions and confirm your slot.</div>
+        </div>
+        <div class="ns-card">
+          <div class="ns-icon">📚</div>
+          <div class="ns-t">Pre-read materials</div>
+          <div class="ns-d">A brief on the Kibaba fund and Monday's agenda will be sent to your email ahead of the session.</div>
+        </div>
+        <div class="ns-card" style="border-color:var(--orangeb);">
+          <div class="ns-icon">⭐</div>
+          <div class="ns-t">Invest before Monday</div>
+          <div class="ns-d">You don't need to wait — your Ndovu account opens in minutes. Start compounding today.</div>
+        </div>
+      </div>
+    </div>
+
+    <a class="invest-final" href="https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3" target="_blank">
+      🌍 Begin Investing on Ndovu — Open Your Account Now
+    </a>
+
+    <div class="disclaimer" style="margin-top:22px;"><strong>Important Notice:</strong> All projected returns are target rates and are not guaranteed. Investment capital is at risk. Past performance does not indicate future results. The Kibaba Multi-Asset Special Fund is regulated by the Capital Markets Authority of Kenya (CMA).<br><br>Ndovu Wealth Limited · CMA Regulated · nwafubwa@ndovu.co · +254 707 462 764</div>
+  </div>
+</div>
+
+</div></div><!-- /wrap /form-section -->
+
+<script>
+const TOTAL_STEPS=10;
+const A={};const multiA={};
+let topupMode='none';
+let selectedDate='2026-06-01';let selectedTime='';let meetType='';
+let calYear=2026;let calMonth=5;
+
+const FUNDS_KES=[
+  {key:'mmf',    label:'Money Market',  short:'MMF',   rate:0.115},
+  {key:'fi',     label:'Fixed Income',  short:'Fixed', rate:0.135},
+  {key:'bonds',  label:'Bonds/T-Bills', short:'Bonds', rate:0.148},
+  {key:'equity', label:'Equities',      short:'Equity',rate:0.170},
+  {key:'kibaba', label:'Kibaba Fund',   short:'Kibaba',rate:0.200},
+];
+const FUNDS_USD=[
+  {key:'us_tb',  label:'US T-Bills',    short:'T-Bill',rate:0.045},
+  {key:'sp500',  label:'S&P 500 avg',   short:'S&P',   rate:0.100},
+  {key:'fi',     label:'Fixed Income',  short:'Fixed', rate:0.120},
+  {key:'equity', label:'Global ETFs',   short:'ETFs',  rate:0.150},
+  {key:'kibaba', label:'Kibaba Fund',   short:'Kibaba',rate:0.180},
+];
+const KES_STEPS=[250000,350000,500000,750000,1000000,1500000,2000000,3000000,5000000,7500000,10000000];
+const USD_STEPS=[2500,5000,10000,20000,50000,100000,250000,500000];
+let curCurrency='KES';let curYears=1;let curFunds=FUNDS_KES;let curSteps=KES_STEPS;let curAmount=500000;
+
+/* ── DOTS ── */
+function buildDots(){const nav=document.getElementById('dot-nav');nav.innerHTML='';for(let i=1;i<=TOTAL_STEPS;i++){const d=document.createElement('div');d.className='dot'+(i===1?' active':'');d.id='dot-'+i;nav.appendChild(d);}}
+buildDots();
+function updateDots(cur){for(let i=1;i<=TOTAL_STEPS;i++){const d=document.getElementById('dot-'+i);if(!d)return;d.className='dot';if(i<cur)d.classList.add('done');if(i===cur)d.classList.add('active');}}
+
+/* ── NAVIGATION ── */
+function goNext(from){
+  document.getElementById('step-'+from).classList.remove('active');
+  const to=from+1;document.getElementById('step-'+to).classList.add('active');
+  const pct=Math.round((to/TOTAL_STEPS)*100);
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('prog-pct').textContent=pct+'%';
+  document.getElementById('prog-label').textContent='Section '+to+' of '+TOTAL_STEPS;
+  updateDots(to);
+  window.scrollTo({top:document.querySelector('.form-section').offsetTop-20,behavior:'smooth'});
+  if(to===5){setTimeout(()=>{initHorizon();updateHorizon();},120);}
+  if(to===10)buildSummary();
+}
+function goBack(from){
+  document.getElementById('step-'+from).classList.remove('active');
+  const to=from-1;document.getElementById('step-'+to).classList.add('active');
+  const pct=Math.round((to/TOTAL_STEPS)*100);
+  document.getElementById('prog-fill').style.width=pct+'%';
+  document.getElementById('prog-pct').textContent=pct+'%';
+  document.getElementById('prog-label').textContent='Section '+to+' of '+TOTAL_STEPS;
+  updateDots(to);
+  window.scrollTo({top:document.querySelector('.form-section').offsetTop-20,behavior:'smooth'});
+}
+
+/* ── PICKERS ── */
+function pickSingle(grp,el,val){
+  document.querySelectorAll('#'+grp+' .opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');A[grp]=val;
+  const ow=document.getElementById('other-'+grp);if(ow)ow.style.display='none';
+  enableNext(grp);
+}
+function pickOther(grp,el){
+  document.querySelectorAll('#'+grp+' .opt').forEach(o=>o.classList.remove('selected'));
+  el.classList.add('selected');
+  // Keep existing value if user typed something already; blank only if fresh
+  const existing=document.getElementById('other-'+grp+'-input');
+  if(existing&&!existing.value.trim())A[grp]='';
+  const ow=document.getElementById('other-'+grp);
+  if(ow){ow.style.display='block';if(existing)existing.focus();}
+  enableNext(grp);
+}
+function watchWords(grp,ta){
+  const words=ta.value.trim().split(/\s+/).filter(w=>w);
+  if(words.length>15){ta.value=words.slice(0,15).join(' ');}
+  const c=Math.min(words.length,15);
+  document.getElementById('other-'+grp+'-count').textContent=c+' / 15 words';
+  document.getElementById('other-'+grp+'-count').className='word-counter'+(c>=15?' limit':'');
+  A[grp]='Other: '+ta.value.trim();
+  enableNext(grp);
+}
+function enableNext(grp){
+  if(grp==='q-goal'||grp==='q-risk'){
+    // Both goal AND risk must be set before step 8 unlocks
+    const n8=document.getElementById('next-8');
+    if(n8)n8.disabled=!(A['q-goal']&&A['q-risk']);
+  } else if(grp==='q-type'){
+    const n=document.getElementById('next-2');
+    if(n)n.disabled=!A['q-type'];
+  }
+}
+function pickMulti(grp,el,val){
+  el.classList.toggle('selected');
+  if(!multiA[grp])multiA[grp]=[];
+  if(el.classList.contains('selected')){if(!multiA[grp].includes(val))multiA[grp].push(val);}
+  else{multiA[grp]=multiA[grp].filter(v=>v!==val);}
+  const nb=el.closest('.step').querySelector('[id^=next-]');
+  if(nb)nb.disabled=multiA[grp].length===0;
+}
+function pickOtherMulti(grp,el){
+  el.classList.toggle('selected');
+  if(!multiA[grp])multiA[grp]=[];
+  const ow=document.getElementById('other-'+grp);
+  if(el.classList.contains('selected')){ow.style.display='block';document.getElementById('other-'+grp+'-input').focus();}
+  else{ow.style.display='none';multiA[grp]=multiA[grp].filter(v=>!v.startsWith('Other:'));}
+  const nb=el.closest('.step').querySelector('[id^=next-]');
+  if(nb)nb.disabled=multiA[grp].length===0;
+}
+function watchWordsMulti(grp,ta){
+  const words=ta.value.trim().split(/\s+/).filter(w=>w);
+  if(words.length>15)ta.value=words.slice(0,15).join(' ');
+  const c=Math.min(words.length,15);
+  document.getElementById('other-'+grp+'-count').textContent=c+' / 15 words';
+  document.getElementById('other-'+grp+'-count').className='word-counter'+(c>=15?' limit':'');
+  if(!multiA[grp])multiA[grp]=[];
+  multiA[grp]=multiA[grp].filter(v=>!v.startsWith('Other:'));
+  if(ta.value.trim())multiA[grp].push('Other: '+ta.value.trim());
+  const nb=ta.closest('.step').querySelector('[id^=next-]');
+  if(nb)nb.disabled=multiA[grp].length===0;
+}
+function pickFund(el,val){
+  el.classList.toggle('sel');
+  if(!multiA['q-funds'])multiA['q-funds']=[];
+  if(el.classList.contains('sel')){if(!multiA['q-funds'].includes(val))multiA['q-funds'].push(val);}
+  else{multiA['q-funds']=multiA['q-funds'].filter(v=>v!==val);}
+  document.getElementById('next-6').disabled=multiA['q-funds'].length===0;
+}
+function pickFundOther(el){
+  el.classList.toggle('sel');
+  const ow=document.getElementById('other-q-funds');
+  if(el.classList.contains('sel')){ow.style.display='block';document.getElementById('other-q-funds-input').focus();}
+  else{ow.style.display='none';if(multiA['q-funds'])multiA['q-funds']=multiA['q-funds'].filter(v=>!v.startsWith('Other:'));}
+  document.getElementById('next-6').disabled=(multiA['q-funds']||[]).length===0;
+}
+function watchWordsFunds(ta){
+  const words=ta.value.trim().split(/\s+/).filter(w=>w);
+  if(words.length>15)ta.value=words.slice(0,15).join(' ');
+  const c=Math.min(words.length,15);
+  document.getElementById('other-q-funds-count').textContent=c+' / 15 words';
+  document.getElementById('other-q-funds-count').className='word-counter'+(c>=15?' limit':'');
+  if(!multiA['q-funds'])multiA['q-funds']=[];
+  multiA['q-funds']=multiA['q-funds'].filter(v=>!v.startsWith('Other:'));
+  if(ta.value.trim())multiA['q-funds'].push('Other: '+ta.value.trim());
+  document.getElementById('next-6').disabled=multiA['q-funds'].length===0;
+}
+function pickReady(el,val){
+  document.querySelectorAll('#q-ready .r-card').forEach(c=>c.classList.remove('sel','hot'));
+  el.classList.add('sel');if(val.includes('Ready'))el.classList.add('hot');
+  A['q-ready']=val;
+  document.getElementById('other-q-ready').style.display='none';
+  document.getElementById('next-7').disabled=false;
+}
+function pickReadyOther(el){
+  document.querySelectorAll('#q-ready .r-card').forEach(c=>c.classList.remove('sel','hot'));
+  el.classList.add('sel');A['q-ready']='';
+  document.getElementById('other-q-ready').style.display='block';
+  document.getElementById('other-q-ready-input').focus();
+  document.getElementById('next-7').disabled=true;
+}
+function watchWordsReady(ta){
+  const words=ta.value.trim().split(/\s+/).filter(w=>w);
+  if(words.length>15)ta.value=words.slice(0,15).join(' ');
+  const c=Math.min(words.length,15);
+  document.getElementById('other-q-ready-count').textContent=c+' / 15 words';
+  document.getElementById('other-q-ready-count').className='word-counter'+(c>=15?' limit':'');
+  A['q-ready']='Other: '+ta.value.trim();
+  document.getElementById('next-7').disabled=!ta.value.trim();
+}
+
+/* ── VALIDATORS ── */
+function checkStep1(){
+  const ok=document.getElementById('f-name').value.trim()&&document.getElementById('f-phone').value.trim()&&document.getElementById('f-email').value.trim();
+  document.getElementById('next-1').disabled=!ok;
+}
+function pickMeet(type){
+  ['virtual','physical'].forEach(t=>{
+    const el=document.getElementById('meet-'+t);
+    if(el)el.classList.remove('sel');
+  });
+  const chosen=document.getElementById('meet-'+type);
+  if(chosen)chosen.classList.add('sel');
+  meetType=type==='virtual'?'Virtual (Zoom / Google Meet)':'In-Person (Nairobi Office)';
+  checkStep9();
+}
+function checkStep9(){document.getElementById('next-9').disabled=!(meetType&&selectedDate&&selectedTime);}
+
+/* ── CALCULATOR ── */
+function setCur(c){
+  curCurrency=c;
+  document.getElementById('cur-kes').classList.toggle('active',c==='KES');
+  document.getElementById('cur-usd').classList.toggle('active',c==='USD');
+  curFunds=c==='KES'?FUNDS_KES:FUNDS_USD;curSteps=c==='KES'?KES_STEPS:USD_STEPS;
+  document.getElementById('range-min').textContent=c==='KES'?'KES 250K':'USD 2.5K';
+  document.getElementById('range-max').textContent=c==='KES'?'KES 10M+':'USD 500K+';
+  document.getElementById('s-kibaba-sub').textContent=c==='KES'?'at 20% p.a.':'at 18% p.a.';
+  document.getElementById('calc-prefix').textContent=c;
+  document.getElementById('topup-prefix').textContent=c;
+  document.getElementById('target-prefix').textContent=c;
+  const sl=document.getElementById('amt-slider');sl.max=curSteps.length-1;sl.value=Math.min(parseInt(sl.value),curSteps.length-1);
+  onSliderInput();
+}
+function setYr(y){
+  curYears=y;[1,3,5,10].forEach(n=>{const b=document.getElementById('yr-'+n);if(b)b.classList.toggle('active',n===y);});
+  updateCalc();
+}
+function setTopup(mode){
+  topupMode=mode;
+  ['none','monthly','quarterly','annual'].forEach(m=>{const b=document.getElementById('tu-'+m);if(b)b.classList.toggle('active',m===mode);});
+  const wr=document.getElementById('topup-input-wrap');wr.style.display=(mode==='none')?'none':'block';
+  const note=document.getElementById('topup-note');
+  if(mode==='monthly')note.textContent='Monthly additions — each deposit compounds from day one.';
+  else if(mode==='quarterly')note.textContent='Quarterly contributions — disciplined growth with cash-flow flexibility.';
+  else if(mode==='annual')note.textContent='Annual top-ups — structured additions once per year.';
+  updateCalc();
+}
+
+function onAmtInput(){
+  const v=parseFloat(document.getElementById('amt-input').value)||0;
+  curAmount=v;
+  const sl=document.getElementById('amt-slider');let best=0;
+  for(let i=0;i<curSteps.length;i++){if(curSteps[i]<=v)best=i;}
+  sl.value=best;updateCalc();
+}
+function onSliderInput(){
+  const sl=document.getElementById('amt-slider');
+  curAmount=curSteps[parseInt(sl.value)];
+  document.getElementById('amt-input').value=curAmount;
+  updateCalc();
+}
+function fmtM(v,cur){
+  const c=cur||curCurrency;const sym=c==='KES'?'KES ':'USD ';
+  if(Math.abs(v)>=1000000)return sym+(v/1000000).toFixed(2)+'M';
+  if(Math.abs(v)>=1000)return sym+(v/1000).toFixed(0)+'K';
+  return sym+Math.round(v).toLocaleString();
+}
+function compound(p,r,y){return p*Math.pow(1+r,y);}
+function cwt(p,r,y,top,freq){
+  if(!top||!freq)return compound(p,r,y);
+  const rp=r/freq;const n=y*freq;
+  return p*Math.pow(1+rp,n)+top*((Math.pow(1+rp,n)-1)/rp);
+}
+function totalDep(p,y,top,freq){return p+(top&&freq?top*y*freq:0);}
+
+function updateCalc(){
+  const raw=parseFloat(document.getElementById('amt-input').value);
+  if(raw&&raw>0)curAmount=raw;
+  const topupAmt=parseFloat(document.getElementById('topup-amount')?.value)||0;
+  const freq=topupMode==='monthly'?12:topupMode==='quarterly'?4:topupMode==='annual'?1:0;
+  const vals=curFunds.map(f=>({...f,end:cwt(curAmount,f.rate,curYears,topupAmt,freq)}));
+  const maxV=Math.max(...vals.map(v=>v.end));
+  const kibaba=vals.find(f=>f.key==='kibaba');
+  const bankRate=curCurrency==='KES'?0.065:0.045;
+  const bank=cwt(curAmount,bankRate,curYears,topupAmt,freq);
+  const deployed=totalDep(curAmount,curYears,topupAmt,freq);
+  document.getElementById('s-invested').textContent=fmtM(deployed);
+  document.getElementById('s-kibaba').textContent=fmtM(kibaba.end);
+  const extra=kibaba.end-bank;
+  document.getElementById('s-extra').textContent=extra>0?'+'+fmtM(extra):'—';
+  document.getElementById('s-gain').textContent='+'+fmtM(kibaba.end-deployed);
+
+  /* Bars */
+  const grid=document.getElementById('bars-grid');grid.innerHTML='';
+  vals.forEach(f=>{
+    const pct=(f.end/maxV)*100;const isK=f.key==='kibaba';
+    const col=document.createElement('div');col.className='bar-col';
+    col.innerHTML=`<div class="bar-val${isK?' hi':''}">${fmtM(f.end)}</div><div class="bar-outer"><div class="bar-inner${isK?' kibaba':''}" style="height:${Math.max(pct,3)}%"></div></div><div class="bar-lbl${isK?' hi':''}">${f.short}<br>${(f.rate*100).toFixed(0)}% p.a.</div>`;
+    grid.appendChild(col);
+  });
+  document.getElementById('chart-title').textContent=`Projected value after ${curYears} year${curYears>1?'s':''}`;
+}
+
+/* Init calc */
+document.getElementById('amt-slider').max=KES_STEPS.length-1;
+document.getElementById('amt-slider').value=2;
+document.getElementById('amt-input').value=500000;
+setYr(1);updateCalc();
+
+/* ── WEALTH HORIZON CHART ── */
+let horizonRAF=null;let horizonProg=0;
+
+function initHorizon(){
+  const canvas=document.getElementById('horizon-canvas');if(!canvas)return;
+  const wrap=canvas.parentElement;
+  canvas.width=wrap.clientWidth-32;canvas.height=260;
+  horizonProg=0;if(horizonRAF)cancelAnimationFrame(horizonRAF);
+  animHorizon();
+}
+function animHorizon(){
+  horizonProg=Math.min(horizonProg+0.022,1);
+  drawHorizon(horizonProg);
+  if(horizonProg<1)horizonRAF=requestAnimationFrame(animHorizon);
+}
+
+/* ── SCENARIO TAB SWITCH ── */
+let activeScTab='time';
+function switchScTab(t){
+  activeScTab=t;
+  ['time','topup','noadditions'].forEach(id=>{
+    const tab=document.getElementById('sctab-'+id);
+    const panel=document.getElementById('scpanel-'+id);
+    if(tab){tab.classList.toggle('active',id===t);tab.classList.toggle('orange',id===t&&t==='topup');}
+    if(panel)panel.classList.toggle('active',id===t);
+  });
+}
+
+/* ── MATH HELPERS ── */
+// Years to reach target by compounding+topup (binary search, step 0.1yr)
+function yrsToTarget(p,r,target,topup,freq){
+  if(p<=0||target<=0)return null;
+  for(let y=0.1;y<=40;y+=0.1){
+    if(cwt(p,r,y,topup,freq)>=target)return parseFloat(y.toFixed(1));
+  }
+  return null;
+}
+// Monthly topup needed to hit target in ty years (binary search on topup)
+function monthlyTopupNeeded(p,r,ty,target){
+  if(cwt(p,r,ty,0,0)>=target)return 0; // already there with no topup
+  let lo=0,hi=target,best=null;
+  for(let i=0;i<40;i++){
+    const mid=(lo+hi)/2;
+    const val=cwt(p,r,ty,mid,12);
+    if(val>=target){best=mid;hi=mid;}else{lo=mid;}
+  }
+  return best!==null?Math.ceil(best/100)*100:null;
+}
+// Current-year string
+function targetYearStr(yrs){return (2026+Math.ceil(yrs)).toString();}
+
+/* ── TABULATION ── */
+function buildTabulation(tw,ty,topupAmt,freq){
+  const wrap=document.getElementById('scenario-wrap');
+  if(!tw||!curAmount){wrap.style.display='none';return;}
+  wrap.style.display='block';
+
+  /* ── PANEL A: Time to goal (with current top-up) ── */
+  const tbody=document.getElementById('time-table-rows');
+  tbody.innerHTML='';
+  let kibabaPanelAYr=null;let nextBestPanelA=null;
+  curFunds.forEach(f=>{
+    const yr=yrsToTarget(curAmount,f.rate,tw,topupAmt,freq);
+    const isKib=f.key==='kibaba';
+    if(isKib)kibabaPanelAYr=yr;
+    else if(yr!==null&&(nextBestPanelA===null||yr<nextBestPanelA))nextBestPanelA=yr;
+    const onTime=yr!==null&&yr<=ty;
+    const tr=document.createElement('tr');
+    if(isKib)tr.className='kibaba-row';
+    tr.innerHTML=`
+      <td>${f.label}<span class="fund-tag">${(f.rate*100).toFixed(0)}%</span></td>
+      <td>${(f.rate*100).toFixed(1)}%</td>
+      <td>${yr!==null?yr.toFixed(1)+' yrs':'>40 yrs'}</td>
+      <td>${yr!==null?targetYearStr(yr):'—'}</td>
+      <td><span class="goal-badge ${onTime?'on':'off'}">${onTime?'✓ On Track':'Needs top-up'}</span></td>`;
+    tbody.appendChild(tr);
+  });
+  // Callout A
+  const topupLabel=topupAmt&&freq?` with ${topupMode} top-ups of ${fmtM(topupAmt,curCurrency)}`:'';
+  const diffA=kibabaPanelAYr&&nextBestPanelA&&nextBestPanelA>kibabaPanelAYr?(nextBestPanelA-kibabaPanelAYr).toFixed(1):null;
+  document.getElementById('sc-callout-time').innerHTML=kibabaPanelAYr?
+    `Kibaba reaches <strong>${fmtM(tw,curCurrency)}</strong>${topupLabel} in <strong>${kibabaPanelAYr.toFixed(1)} years</strong>${diffA?` — <strong>${diffA} years ahead</strong> of the next best strategy.`:'.'}  Your target year: <strong>${targetYearStr(kibabaPanelAYr)}</strong>.`:
+    'Set a target wealth above to generate the analysis.';
+
+  /* ── PANEL B: Top-up needed to hit goal in ty years ── */
+  const grid=document.getElementById('topup-need-grid');
+  grid.innerHTML='';
+  let kibTopup=null;let nextBestTopup=null;
+  curFunds.forEach(f=>{
+    const needed=monthlyTopupNeeded(curAmount,f.rate,ty,tw);
+    const isKib=f.key==='kibaba';
+    if(isKib)kibTopup=needed;
+    else if(needed!==null&&(nextBestTopup===null||needed<nextBestTopup))nextBestTopup=needed;
+    const div=document.createElement('div');
+    div.className='tn-card'+(isKib?' kibaba':'');
+    div.innerHTML=`
+      <div class="tn-fund ${isKib?'ki':''}">${f.label}</div>
+      <div class="tn-amount ${isKib?'ki':''}">${needed===0?'No top-up needed':needed!==null?fmtM(needed,curCurrency)+'/mo':'Not achievable in '+ty+'yrs'}</div>
+      <div class="tn-note">${(f.rate*100).toFixed(0)}% p.a. · Target in ${ty} yrs · ${needed===0?'Current capital is sufficient':needed!==null?'monthly addition required':'increase capital or extend timeline'}</div>`;
+    grid.appendChild(div);
+  });
+  const saving=kibTopup!==null&&nextBestTopup!==null&&nextBestTopup>kibTopup?(nextBestTopup-kibTopup):null;
+  document.getElementById('sc-callout-topup').innerHTML=kibTopup!==null?
+    (kibTopup===0?`Your current capital alone is sufficient to reach <strong>${fmtM(tw,curCurrency)}</strong> within ${ty} years on Kibaba — no additional contributions required.`:
+    `To reach <strong>${fmtM(tw,curCurrency)}</strong> in <strong>${ty} years</strong>, Kibaba requires a monthly top-up of just <strong>${fmtM(kibTopup,curCurrency)}</strong>${saving?` — <strong>${fmtM(saving,curCurrency)} less per month</strong> than the next best strategy.`:'.'}`):'—';
+
+  /* ── PANEL C: No additions ── */
+  const nbodyC=document.getElementById('noadd-table-rows');
+  nbodyC.innerHTML='';
+  curFunds.forEach(f=>{
+    const valAtTy=cwt(curAmount,f.rate,ty,0,0);
+    const yr=yrsToTarget(curAmount,f.rate,tw,0,0);
+    const gap=valAtTy-tw;
+    const isKib=f.key==='kibaba';
+    const tr=document.createElement('tr');
+    if(isKib)tr.className='kibaba-row';
+    tr.innerHTML=`
+      <td>${f.label}<span class="fund-tag">${(f.rate*100).toFixed(0)}%</span></td>
+      <td>${(f.rate*100).toFixed(1)}%</td>
+      <td>${fmtM(valAtTy,curCurrency)}</td>
+      <td>${yr!==null?yr.toFixed(1)+' yrs':'>40 yrs'}</td>
+      <td style="color:${gap>=0?'#4AE086':'var(--orangel)'};">${gap>=0?'+':''}${fmtM(Math.abs(gap),curCurrency)} ${gap>=0?'surplus':'short'}</td>`;
+    nbodyC.appendChild(tr);
+  });
+  const kibValC=cwt(curAmount,curFunds.find(f=>f.key==='kibaba').rate,ty,0,0);
+  const kibGap=kibValC-tw;
+  document.getElementById('sc-callout-noadd').innerHTML=`With no additions, <strong>${fmtM(curAmount,curCurrency)}</strong> on Kibaba grows to <strong>${fmtM(kibValC,curCurrency)}</strong> in ${ty} years — `+
+    (kibGap>=0?`a <strong>surplus of ${fmtM(kibGap,curCurrency)}</strong> above your target.`:`<strong>${fmtM(Math.abs(kibGap),curCurrency)} short</strong> of your target. Add regular top-ups (see Tab 2) to close this gap.`);
+
+  // Refresh current tab
+  switchScTab(activeScTab);
+}
+
+/* ── UPDATE HORIZON (chart + cards + tabulation) ── */
+function updateHorizon(){
+  if(horizonProg>=1){drawHorizon(1);}
+  else{horizonProg=0;animHorizon();}
+  const tw=parseFloat(document.getElementById('target-wealth').value)||0;
+  const ty=parseInt(document.getElementById('target-year').value)||5;
+  const topupAmt=parseFloat(document.getElementById('topup-amount')?.value)||0;
+  const freq=topupMode==='monthly'?12:topupMode==='quarterly'?4:topupMode==='annual'?1:0;
+  document.getElementById('hi-now').textContent=curAmount>0?fmtM(curAmount):'—';
+  document.getElementById('target-prefix').textContent=curCurrency;
+  if(tw>0&&curAmount>0){
+    const kibaba=curFunds.find(f=>f.key==='kibaba');
+    const others=curFunds.filter(f=>f.key!=='kibaba');
+    const kibYr=yrsToTarget(curAmount,kibaba.rate,tw,topupAmt,freq);
+    let nextBestYr=null;
+    for(const f of others){const y=yrsToTarget(curAmount,f.rate,tw,topupAmt,freq);if(y!==null&&(nextBestYr===null||y<nextBestYr))nextBestYr=y;}
+    if(kibYr!==null){
+      document.getElementById('hi-kibaba-yr').textContent=kibYr.toFixed(1)+' yrs';
+      const diff=nextBestYr&&nextBestYr>kibYr?(nextBestYr-kibYr):null;
+      document.getElementById('hi-diff').textContent=diff?diff.toFixed(1)+' yrs faster':'Fastest';
+      const topupNote=topupAmt>0?` With ${topupMode} additions of ${fmtM(topupAmt,curCurrency)}, your compounding accelerates further.`:'';
+      const diffNote=diff?` That is <strong>${diff.toFixed(1)} years sooner</strong> than the next best alternative.`:' No comparable strategy reaches this target within 40 years.';
+      document.getElementById('horizon-msg').innerHTML=`On <strong>${fmtM(curAmount)}</strong>, Kibaba reaches your <strong>${fmtM(tw,curCurrency)}</strong> goal in <strong>${kibYr.toFixed(1)} years</strong> (by ${targetYearStr(kibYr)}).${diffNote}${topupNote}`;
+    } else {
+      document.getElementById('hi-kibaba-yr').textContent='>40 yrs';
+      document.getElementById('hi-diff').textContent='—';
+      document.getElementById('horizon-msg').innerHTML=`Your target of <strong>${fmtM(tw,curCurrency)}</strong> is above what Kibaba can reach in 40 years from <strong>${fmtM(curAmount)}</strong> alone. Add regular top-ups or increase your initial capital to bring the goal within range.`;
+    }
+    buildTabulation(tw,ty,topupAmt,freq);
+  } else {
+    document.getElementById('scenario-wrap').style.display='none';
+  }
+}
+
+function drawHorizon(progress){
+  const canvas=document.getElementById('horizon-canvas');if(!canvas)return;
+  const ctx=canvas.getContext('2d');
+  const W=canvas.width;const H=canvas.height;
+  const pad={top:28,right:52,bottom:42,left:68};
+  const cW=W-pad.left-pad.right;const cH=H-pad.top-pad.bottom;
+  const tw=parseFloat(document.getElementById('target-wealth').value)||0;
+  const maxYrSel=parseInt(document.getElementById('target-year').value)||5;
+  const topupAmt=parseFloat(document.getElementById('topup-amount')?.value)||0;
+  const freq=topupMode==='monthly'?12:topupMode==='quarterly'?4:topupMode==='annual'?1:0;
+  const maxYr=Math.max(maxYrSel+1,10);
+  const maxVal=Math.max(...curFunds.map(f=>cwt(curAmount,f.rate,maxYr,topupAmt,freq)),tw*1.12,curAmount*1.05)||1;
+
+  const xS=(yr)=>pad.left+(yr/maxYr)*cW;
+  const yS=(v)=>pad.top+cH-(v/maxVal)*cH;
+
+  ctx.clearRect(0,0,W,H);
+
+  // Background
+  ctx.fillStyle='rgba(7,17,32,0.01)';ctx.fillRect(0,0,W,H);
+
+  // Grid
+  ctx.strokeStyle='rgba(26,74,154,0.14)';ctx.lineWidth=1;
+  for(let i=0;i<=5;i++){const y=pad.top+(i/5)*cH;ctx.beginPath();ctx.moveTo(pad.left,y);ctx.lineTo(pad.left+cW,y);ctx.stroke();}
+
+  const pts=Math.floor(maxYr*24);
+
+  // Non-kibaba funds
+  curFunds.filter(f=>f.key!=='kibaba').forEach(f=>{
+    ctx.beginPath();
+    for(let s=0;s<=pts*progress;s++){
+      const yr=s/24;const v=cwt(curAmount,f.rate,yr,topupAmt,freq);
+      if(s===0)ctx.moveTo(xS(yr),yS(v));else ctx.lineTo(xS(yr),yS(v));
+    }
+    ctx.strokeStyle='rgba(91,143,240,0.32)';ctx.lineWidth=1.5;ctx.shadowBlur=0;ctx.stroke();
+  });
+
+  // Kibaba
+  const kib=curFunds.find(f=>f.key==='kibaba');
+  const kibPoints=[];
+  for(let s=0;s<=pts*progress;s++){const yr=s/24;kibPoints.push({x:xS(yr),y:yS(cwt(curAmount,kib.rate,yr,topupAmt,freq))});}
+  if(kibPoints.length>1){
+    // Fill
+    ctx.beginPath();ctx.moveTo(kibPoints[0].x,kibPoints[0].y);
+    kibPoints.forEach(p=>ctx.lineTo(p.x,p.y));
+    const last=kibPoints[kibPoints.length-1];
+    ctx.lineTo(last.x,pad.top+cH);ctx.lineTo(kibPoints[0].x,pad.top+cH);ctx.closePath();
+    const grad=ctx.createLinearGradient(0,pad.top,0,pad.top+cH);
+    grad.addColorStop(0,'rgba(232,92,26,0.15)');grad.addColorStop(1,'rgba(232,92,26,0)');
+    ctx.fillStyle=grad;ctx.fill();
+    // Line
+    ctx.beginPath();ctx.moveTo(kibPoints[0].x,kibPoints[0].y);
+    kibPoints.forEach(p=>ctx.lineTo(p.x,p.y));
+    ctx.shadowColor='rgba(232,92,26,0.45)';ctx.shadowBlur=7;
+    ctx.strokeStyle='#E85C1A';ctx.lineWidth=2.8;ctx.stroke();ctx.shadowBlur=0;
+  }
+
+  // Target line
+  if(tw>0&&tw<maxVal*1.1){
+    const ty=yS(tw);
+    ctx.setLineDash([5,4]);ctx.strokeStyle='rgba(255,255,255,0.28)';ctx.lineWidth=1.5;
+    ctx.beginPath();ctx.moveTo(pad.left,ty);ctx.lineTo(pad.left+cW,ty);ctx.stroke();ctx.setLineDash([]);
+    ctx.fillStyle='rgba(255,255,255,0.45)';ctx.font='10px DM Sans,sans-serif';ctx.textAlign='left';
+    ctx.fillText('Target '+fmtM(tw,curCurrency),pad.left+5,ty-5);
+    // Kibaba crossing
+    for(let y=0;y<=maxYr;y+=0.1){
+      const v=cwt(curAmount,kib.rate,y,topupAmt,freq);
+      if(v>=tw){
+        const cx=xS(y);const cy=yS(tw);
+        if(cx<=pad.left+cW*progress){
+          ctx.beginPath();ctx.arc(cx,cy,5,0,Math.PI*2);ctx.fillStyle='#E85C1A';ctx.shadowColor='rgba(232,92,26,0.6)';ctx.shadowBlur=8;ctx.fill();ctx.shadowBlur=0;
+          ctx.fillStyle='#FF7B45';ctx.font='bold 11px DM Sans,sans-serif';ctx.textAlign='left';
+          ctx.fillText('Yr '+y.toFixed(1),cx+9,cy-5);
+        }break;
+      }
+    }
+  }
+
+  // Axes
+  ctx.fillStyle='rgba(220,233,250,0.42)';ctx.font='10px DM Sans,sans-serif';ctx.textAlign='center';
+  for(let y=0;y<=maxYr;y+=(maxYr>12?Math.ceil(maxYr/6):2)){ctx.fillText('Yr '+y,xS(y),H-8);}
+  ctx.textAlign='right';
+  for(let i=0;i<=4;i++){const v=(maxVal/4)*i;ctx.fillText(fmtM(v,curCurrency),pad.left-7,yS(v)+4);}
+
+  // Fund labels right edge
+  if(progress>=0.9){
+    ctx.textAlign='left';
+    curFunds.forEach(f=>{
+      const v=cwt(curAmount,f.rate,maxYr*progress,topupAmt,freq);
+      const isK=f.key==='kibaba';
+      ctx.fillStyle=isK?'#FF7B45':'rgba(91,143,240,0.55)';
+      ctx.font=(isK?'bold ':'')+'10px DM Sans,sans-serif';
+      ctx.fillText(f.short,pad.left+cW+5,yS(v)+4);
+    });
+  }
+}
+
+window.addEventListener('resize',()=>{
+  const canvas=document.getElementById('horizon-canvas');
+  if(canvas&&document.getElementById('step-5').classList.contains('active')){
+    const wrap=canvas.parentElement;canvas.width=wrap.clientWidth-32;initHorizon();
+  }
+});
+
+/* ── CALENDAR ── */
+const MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+function buildCalendar(){
+  const grid=document.getElementById('cal-grid');grid.innerHTML='';
+  document.getElementById('cal-month-label').textContent=MONTHS[calMonth]+' '+calYear;
+  ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].forEach((d,i)=>{
+    const el=document.createElement('div');el.className='cal-dow'+(i>=5?' weekend':'');el.textContent=d;grid.appendChild(el);
+  });
+  const first=new Date(calYear,calMonth,1);const last=new Date(calYear,calMonth+1,0).getDate();
+  let sd=first.getDay();sd=(sd+6)%7;
+  const today=new Date();today.setHours(0,0,0,0);
+  for(let i=0;i<sd;i++){const e=document.createElement('div');e.className='cal-day empty';grid.appendChild(e);}
+  for(let d=1;d<=last;d++){
+    const el=document.createElement('div');
+    const dt=new Date(calYear,calMonth,d);const dow=dt.getDay();
+    const isWe=dow===0||dow===6;const isPast=dt<today;const isMon=dow===1;
+    const ds=calYear+'-'+String(calMonth+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+    el.textContent=d;
+    if(isWe||isPast){el.className='cal-day'+(isWe?' weekend':' past');}
+    else{
+      el.className='cal-day available'+(isMon?' monday':'');
+      el.onclick=()=>{document.querySelectorAll('.cal-day.selected').forEach(e=>e.classList.remove('selected'));el.classList.add('selected');selectedDate=ds;checkStep9();};
+      if(ds===selectedDate)el.classList.add('selected');
+    }
+    grid.appendChild(el);
+  }
+}
+function calPrev(){calMonth--;if(calMonth<0){calMonth=11;calYear--;}buildCalendar();}
+function calNext(){calMonth++;if(calMonth>11){calMonth=0;calYear++;}buildCalendar();}
+
+function buildTimeSlots(){
+  const wrap=document.getElementById('time-slots-grid');wrap.innerHTML='';
+  ['8:00','8:30','9:00','9:30','10:00','10:30','11:00','11:30','12:00 PM','12:30','1:00','1:30','2:00','2:30','3:00','3:30','4:00','4:30','5:00','5:30','6:00'].forEach((s,i)=>{
+    const label=i<4?s+' AM':i===8?'12:00 PM':i>8?s.replace(':','.')+' PM':s+' AM';
+    const raw=['8:00 AM','8:30 AM','9:00 AM','9:30 AM','10:00 AM','10:30 AM','11:00 AM','11:30 AM','12:00 PM','12:30 PM','1:00 PM','1:30 PM','2:00 PM','2:30 PM','3:00 PM','3:30 PM','4:00 PM','4:30 PM','5:00 PM','5:30 PM','6:00 PM'];
+    const el=document.createElement('div');
+    el.className='time-slot'+(raw[i]===selectedTime?' sel':'');
+    el.textContent=raw[i];
+    el.onclick=()=>{document.querySelectorAll('.time-slot.sel').forEach(e=>e.classList.remove('sel'));el.classList.add('sel');selectedTime=raw[i];document.getElementById('selected-slot-display').textContent='✓  '+selectedDate+' · '+selectedTime;checkStep9();};
+    wrap.appendChild(el);
+  });
+}
+buildCalendar();buildTimeSlots();
+
+/* ── SUMMARY ── */
+function buildSummary(){
+  document.getElementById('s-name').textContent=document.getElementById('f-name').value||'—';
+  document.getElementById('s-phone').textContent=document.getElementById('f-phone').value||'—';
+  document.getElementById('s-email').textContent=document.getElementById('f-email').value||'—';
+  document.getElementById('s-loc').textContent=document.getElementById('f-loc').value||'Not provided';
+  document.getElementById('s-type').textContent=A['q-type']||'—';
+  document.getElementById('s-curr').textContent=(multiA['q-curr']||[]).join(', ')||'—';
+  document.getElementById('s-goal').textContent=A['q-goal']||'—';
+  document.getElementById('s-risk').textContent=A['q-risk']||'—';
+  document.getElementById('s-inv').textContent=document.getElementById('f-avg-inv').value||'—';
+  document.getElementById('s-ready').textContent=A['q-ready']||'—';
+  document.getElementById('s-funds').textContent=(multiA['q-funds']||[]).join(', ')||'—';
+  document.getElementById('s-meet').textContent=meetType||'—';
+  const fmtDate=d=>{if(!d)return '';const[y,m,dy]=d.split('-');const months=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];return `${parseInt(dy)} ${months[parseInt(m)-1]} ${y}`;};
+  document.getElementById('s-datetime').textContent=(selectedDate&&selectedTime)?fmtDate(selectedDate)+' · '+selectedTime:'—';
+  document.getElementById('s-notes').textContent=document.getElementById('f-notes').value||'No specific notes';
+  const tw=document.getElementById('target-wealth').value;
+  const tyr=document.getElementById('target-year').value;
+  document.getElementById('s-target').textContent=tw?fmtM(parseFloat(tw),curCurrency)+' by '+tyr+' years':'Not specified';
+  const type=A['q-type']||'';
+  document.getElementById('s-prof-badge').textContent=type.includes('High Net')?'High Net Worth Investor':type.includes('Business')?'Business Owner':type.includes('Diaspora')?'Diaspora Investor':type.includes('Family')?'Family Office':'Verified Investor';
+}
+
+/* ── WHATSAPP ── */
+/* ── BUILD PROFILE TEXT ── */
+function buildProfileText(){
+  return [
+    '=== KIBABA INVESTOR REGISTRATION ===',
+    '',
+    'CONTACT',
+    'Name:        '+document.getElementById('f-name').value,
+    'Mobile:      '+document.getElementById('f-phone').value,
+    'Email:       '+document.getElementById('f-email').value,
+    'Location:    '+(document.getElementById('f-loc').value||'Not provided'),
+    '',
+    'INVESTMENT PROFILE',
+    'Standing:    '+(A['q-type']||'—'),
+    'Assets:      '+((multiA['q-curr']||[]).join(', ')||'—'),
+    'Objective:   '+(A['q-goal']||'—'),
+    'Risk:        '+(A['q-risk']||'—'),
+    'Capital:     '+(document.getElementById('f-avg-inv').value||'—'),
+    'Readiness:   '+(A['q-ready']||'—'),
+    'Wealth Goal: '+document.getElementById('s-target').textContent,
+    '',
+    'SESSION',
+    'Topics:      '+((multiA['q-funds']||[]).join(', ')||'—'),
+    'Format:      '+(meetType||'—'),
+    'Date & Time: '+selectedDate+' · '+selectedTime,
+    'Notes:       '+(document.getElementById('f-notes').value||'None'),
+    '',
+    'Submitted via Kibaba HNW Profile Form — Ndovu Wealth',
+  ].join('\n');
+}
+
+function copyProfile(){
+  navigator.clipboard.writeText(buildProfileText()).then(()=>{
+    const ok=document.getElementById('copy-ok');ok.style.display='block';
+    setTimeout(()=>ok.style.display='none',3000);
+  });
+}
+
+/* ── EMAIL SUBMISSION via Web3Forms ── */
+// ════════════════════════════════════════════════
+//  HOW TO ACTIVATE:
+//  1. Visit https://web3forms.com
+//  2. Enter your email → you receive your Access Key instantly
+//  3. Paste it below replacing YOUR_ACCESS_KEY_HERE
+// ════════════════════════════════════════════════
+const W3F_KEY = 'ca110425-53be-4521-a32f-d763eba37f30';
+
+async function submitForm(){
+  const btn=document.getElementById('submit-btn');
+  const errEl=document.getElementById('form-error');
+  errEl.style.display='none';
+
+  // Basic validation
+  const name=document.getElementById('f-name').value.trim();
+  const phone=document.getElementById('f-phone').value.trim();
+  const email=document.getElementById('f-email').value.trim();
+  if(!name||!phone||!email){
+    errEl.textContent='Please complete your name, mobile, and email before submitting.';
+    errEl.style.display='block';
+    window.scrollTo({top:document.getElementById('submit-section').offsetTop-30,behavior:'smooth'});
+    return;
+  }
+
+  // Loading state
+  btn.disabled=true;
+  btn.innerHTML='<span class="spinner"></span>Submitting…';
+
+  const payload={
+    access_key: W3F_KEY,
+    subject: 'Kibaba Briefing Registration — '+name,
+    from_name: 'Ndovu Kibaba',
+    email: email,           // Web3Forms sends auto-reply to this address
+    replyto: email,
+    botcheck: false,
+
+    // ── Registrant details ──
+    'Full Name':   name,
+    'Mobile':      phone,
+    'Email':       email,
+    'Location':    document.getElementById('f-loc').value||'—',
+
+    // ── Profile ──
+    'Investor Type':  A['q-type']||'—',
+    'Current Assets': (multiA['q-curr']||[]).join(', ')||'—',
+    'Objective':      A['q-goal']||'—',
+    'Risk Profile':   A['q-risk']||'—',
+    'Capital Range':  document.getElementById('f-avg-inv').value||'—',
+    'Readiness':      A['q-ready']||'—',
+    'Wealth Target':  document.getElementById('s-target').textContent,
+
+    // ── Session ──
+    'Topics Requested': (multiA['q-funds']||[]).join(', ')||'—',
+    'Session Format':   meetType||'—',
+    'Session Date':     selectedDate,
+    'Session Time':     selectedTime,
+    'Notes':            document.getElementById('f-notes').value||'—',
+
+    // Auto-reply message sent to registrant
+    'message': autoReplyBody(name, email),
+  };
+
+  try {
+    const res=await fetch('https://api.web3forms.com/submit',{
+      method:'POST',
+      headers:{'Content-Type':'application/json','Accept':'application/json'},
+      body:JSON.stringify(payload),
+    });
+    const data=await res.json();
+    if(data.success){
+      showSuccess(name);
+    } else {
+      throw new Error(data.message||'Submission failed');
+    }
+  } catch(err){
+    btn.disabled=false;
+    btn.innerHTML='Submit My Registration';
+    errEl.textContent='Something went wrong: '+err.message+'. Please try again or copy your profile and email nwafubwa@ndovu.co directly.';
+    errEl.style.display='block';
+  }
+}
+
+function autoReplyBody(name, email){
+  return `Dear ${name},\n\nThank you for registering for the Kibaba Private Investor Briefing.\n\nYou are confirmed for:\n📅 Monday, 1 June 2026\n🕗 ${selectedTime}\n📍 ${meetType||'Format to be confirmed'}\n\nWhat to expect:\n• A focused, personalised briefing on the Kibaba Multi-Asset Special Fund\n• Live return modelling using your own capital figures\n• Direct Q&A with an Ndovu investment advisor\n• CMA-regulated fund documentation available on request\n\nYou may also begin investing today — no need to wait for Monday:\nhttps://portal.ndovu.co/auth/registration?code=6Q4ZC6A3\n\nWarm regards,\nNdovu Wealth | Kibaba Team\nnwafubwa@ndovu.co | +254 707 462 764\n\n─────────────────────────────\nNdovu Wealth Limited · CMA Regulated\nThis email is a registration confirmation only and does not constitute financial advice.`;
+}
+
+/* ── SUCCESS SCREEN ── */
+function showSuccess(name){
+  // Hide form
+  document.getElementById('submit-section').style.display='none';
+  document.querySelectorAll('.sum-card').forEach(c=>c.style.display='none');
+  document.querySelector('.invest-strip').style.display='none';
+  document.querySelectorAll('.hdr-tag,.submit-title,.submit-sub,.prof-badge').forEach(e=>{if(e)e.style.display='none';});
+
+  // Populate success
+  document.getElementById('success-name').textContent=name;
+  document.getElementById('success-time').textContent=selectedTime||'Time confirmed by advisor';
+  document.getElementById('success-format').textContent=meetType||'Format confirmed by advisor';
+
+  // Google Calendar link
+  const startDt='20260601T'+timeToGoogle(selectedTime)+'00';
+  const endDt='20260601T'+timeToGoogle(selectedTime,1)+'00';
+  const gcal=`https://calendar.google.com/calendar/render?action=TEMPLATE`+
+    `&text=${encodeURIComponent('Kibaba Private Investor Briefing — Ndovu Wealth')}`+
+    `&dates=${startDt}/${endDt}`+
+    `&details=${encodeURIComponent('You are confirmed for the Kibaba Multi-Asset Special Fund Private Briefing.\n\nInvestment portal: https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3\n\nContact: nwafubwa@ndovu.co | +254 707 462 764')}`+
+    `&location=${encodeURIComponent(meetType||'Ndovu Wealth — details to follow')}`;
+  document.getElementById('gcal-link').href=gcal;
+
+  // Show
+  const screen=document.getElementById('success-screen');
+  screen.classList.add('visible');
+  window.scrollTo({top:document.getElementById('step-10').offsetTop-20,behavior:'smooth'});
+}
+
+function timeToGoogle(slot,addHours=0){
+  if(!slot)return '090000';
+  const m=slot.match(/(\d+):(\d+)\s*(AM|PM)/i);
+  if(!m)return '090000';
+  let h=parseInt(m[1]);const min=m[2];const ampm=m[3].toUpperCase();
+  if(ampm==='PM'&&h!==12)h+=12;
+  if(ampm==='AM'&&h===12)h=0;
+  h+=addHours;
+  return String(h).padStart(2,'0')+min+'00';
+}
+
+function downloadICS(){
+  const start='20260601T'+timeToGoogle(selectedTime)+'00';
+  const end='20260601T'+timeToGoogle(selectedTime,1)+'00';
+  const name=document.getElementById('f-name').value||'Investor';
+  const ics=[
+    'BEGIN:VCALENDAR',
+    'VERSION:2.0',
+    'PRODID:-//Ndovu Wealth//Kibaba Briefing//EN',
+    'BEGIN:VEVENT',
+    'UID:kibaba-briefing-2026@ndovu.co',
+    'DTSTAMP:20260520T000000Z',
+    `DTSTART:${start}`,
+    `DTEND:${end}`,
+    'SUMMARY:Kibaba Private Investor Briefing — Ndovu Wealth',
+    `DESCRIPTION:Private investor briefing for ${name}.\\nSession: ${selectedTime} · ${meetType||'Format TBC'}\\nInvest: https://portal.ndovu.co/auth/registration?code=6Q4ZC6A3`,
+    `LOCATION:${meetType||'Ndovu Wealth — details to follow'}`,
+    'STATUS:CONFIRMED',
+    'BEGIN:VALARM',
+    'TRIGGER:-PT60M',
+    'ACTION:DISPLAY',
+    'DESCRIPTION:Kibaba Briefing in 1 hour',
+    'END:VALARM',
+    'END:VEVENT',
+    'END:VCALENDAR',
+  ].join('\r\n');
+  const blob=new Blob([ics],{type:'text/calendar'});
+  const url=URL.createObjectURL(blob);
+  const a=document.createElement('a');a.href=url;a.download='kibaba-briefing-june1.ics';a.click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
